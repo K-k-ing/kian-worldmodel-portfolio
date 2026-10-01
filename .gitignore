@@ -1,0 +1,41 @@
+# Local deployment outputs and tooling
+_site/
+netlify-deploy.zip
+netlify.toml
+_headers
+build-netlify.mjs
+audit-netlify.mjs
+.npm-cache/
+.codex-tools/
+output/
+.agents/
+.DS_Store
+Thumbs.db
+
+# Internal provenance inventory and local audit notes (not site assets)
+content/evidence-registry.json
+docs/content_map.md
+assets/resume/Kaixin_Kang_Technical_Artist_Resume.docx
+
+# Local reports and legacy backup material
+PROJECT_03_CHANGE_REPORT.md
+新建文件夹/
+新建文件夹.zip
+
+# Unused source documents and non-web-safe legacy assets
+assets/profile/微信图片_20240820144413.jpg
+assets/profile/材料.pdf
+assets/projects/ai-asset-pipeline/ai机器人/
+assets/projects/ai-asset-pipeline/ai无人机/
+assets/projects/ai-asset-pipeline/ai无人机拆解图/
+assets/projects/ai-asset-pipeline/ai生成/
+assets/projects/ai-asset-pipeline/ue渲染/
+assets/projects/ai-asset-pipeline/佛像/
+assets/projects/ai-asset-pipeline/场景/
+assets/projects/ai-asset-pipeline/场景模型/
+assets/projects/ai-asset-pipeline/场景渲染/
+assets/projects/ai-asset-pipeline/效果图/
+assets/projects/ai-asset-pipeline/无人机/
+assets/projects/ai-asset-pipeline/机器人/
+assets/projects/ai-asset-pipeline/过程图/
+assets/projects/ai-npc/ai NPC/
