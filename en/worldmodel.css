@@ -352,3 +352,90 @@ body.wm-site {
   html { scroll-behavior: auto; }
   .wm-image-button::after, .wm-image-link img { transition: none; }
 }
+
+
+/* WORLDIR chair case: evidence-first editorial sequence. */
+.wm-replacement { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #657069; }
+.wm-replacement [id] { scroll-margin-top: 7rem; }
+.wm-replacement h3 { font-size: clamp(2.1rem, 3.7vw, 3.8rem); margin: .8rem 0 0; }
+.wm-replacement h4 { color: var(--ink); font-size: clamp(1.45rem, 2.2vw, 2.15rem); letter-spacing: -.035em; line-height: 1.18; font-weight: 500; margin: .7rem 0 1.2rem; }
+.wm-replacement > .wm-medium-lede { max-width: 75ch; }
+.wm-replacement-nav { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; margin: 2.5rem 0 .5rem; }
+.wm-replacement-nav a { border-top: 1px solid var(--line); padding: 1rem .4rem 1rem 0; font-size: .8rem; color: var(--ink); }
+.wm-replacement-nav span { display: block; color: var(--accent); font: .65rem Consolas, monospace; margin-bottom: .5rem; }
+.wm-replacement-nav a:hover { border-color: var(--accent); color: var(--accent); }
+.wm-replacement-step { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(2rem, 4vw, 4rem); align-items: center; border-top: 1px solid var(--line); padding-block: 3rem; }
+.wm-step-copy p:not(.wm-meta) { font-size: .92rem; max-width: 58ch; }
+.wm-replacement-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; min-width: 0; }
+.wm-replacement-pair img { aspect-ratio: 1; object-fit: contain; background: #111516; }
+.wm-reference-pair { grid-template-columns: .65fr 1fr; align-items: center; }
+.wm-reference-pair figure:first-child .wm-image-button { padding: 1rem; background: #111516; }
+.wm-reference-pair figure:first-child img { width: 193px; max-width: 100%; height: auto; aspect-ratio: auto; margin: auto; }
+.wm-fit-review { display: grid; grid-template-columns: .8fr 1fr; align-items: center; gap: clamp(2rem, 5vw, 5rem); margin: 1rem 0 3rem; padding: 2rem; background: #111516; border: 1px solid var(--line); }
+.wm-fit-diagnostic { max-width: 370px; justify-self: center; }
+.wm-fit-findings dl { margin: 2rem 0; }
+.wm-fit-findings dl > div { border-top: 1px solid var(--line); padding: 1.2rem 0; }
+.wm-fit-findings dt { color: var(--accent); font-size: 2.6rem; line-height: 1.1; letter-spacing: -.04em; }
+.wm-fit-findings dt span { display: block; color: var(--ink); font-size: .9rem; letter-spacing: 0; margin: .6rem 0; }
+.wm-fit-findings dd { color: var(--muted); margin: .75rem 0 0; font-size: .88rem; }
+.wm-acceptance { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; border-top: 1px solid var(--line); padding-block: 3rem; }
+.wm-review-sheet { border: 1px solid var(--line); padding: 1.2rem; }
+.wm-review-sheet[open] summary { margin-bottom: 1rem; }
+.wm-replacement-result { border-top: 1px solid var(--line); padding-top: 3rem; }
+.wm-replacement-result .wm-section-head h4 { margin-bottom: 0; }
+.wm-result-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 2rem; align-items: start; }
+.wm-result-context { display: grid; gap: 1.5rem; }
+.wm-comparison-controls { display: flex; gap: .5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.wm-comparison-controls[hidden], .wm-replacement [data-chair-panel][hidden] { display: none; }
+.wm-comparison-controls button { border: 1px solid #65716d; background: transparent; color: var(--ink); min-height: 44px; padding: .65rem 1rem; font: inherit; font-size: .8rem; cursor: pointer; }
+.wm-comparison-controls button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.wm-replacement :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.wm-reference-note { border-left: 2px solid var(--accent); padding-left: 1.2rem; font-size: .9rem; margin: 2rem 0; max-width: 95ch; }
+.wm-replacement-takeaway { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; border-top: 1px solid var(--line); padding-top: 2rem; }
+.wm-replacement-takeaway p:not(.wm-meta) { font-size: .88rem; }
+.wm-replacement-takeaway h4 { font-size: 1.4rem; }
+@media (max-width: 950px) {
+  .wm-replacement-step { grid-template-columns: 1fr; gap: 1.5rem; }
+  .wm-step-copy p:not(.wm-meta) { max-width: 78ch; }
+  .wm-acceptance { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 600px) {
+  .wm-replacement { margin-top: 3rem; padding-top: 2rem; }
+  .wm-replacement-nav { grid-template-columns: 1fr; gap: 0; }
+  .wm-replacement-nav a { display: flex; gap: 1rem; align-items: center; padding-block: .75rem; }
+  .wm-replacement-nav span { margin: 0; }
+  .wm-replacement-pair { grid-template-columns: 1fr; gap: 1.5rem; }
+  .wm-reference-pair { grid-template-columns: .7fr 1fr; gap: .75rem; }
+  .wm-reference-pair figure:first-child .wm-image-button { padding: .5rem; }
+  .wm-fit-review { grid-template-columns: 1fr; padding: 1rem; }
+  .wm-result-grid, .wm-replacement-takeaway { grid-template-columns: 1fr; gap: 1.5rem; }
+  .wm-replacement-step { padding-block: 2rem; }
+}
+
+
+/* Source-constrained walls and scene-level replacement evidence. */
+.wm-case-links { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1.5rem; }
+.wm-case-links a { color: var(--accent); font-size: .85rem; padding-block: .5rem; }
+.wm-case-links a:hover { color: var(--ink); }
+.wm-case-links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.wm-wall-heading { margin-top: 3rem; max-width: 85ch; }
+.wm-wall-heading > p:not(.wm-meta) { font-size: .94rem; }
+.wm-wall-case > .wm-evidence { margin-top: 1.6rem; }
+.wm-slice-scroll { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-color: #65736c #111516; padding-bottom: .5rem; }
+.wm-slice-scroll .wm-image-button { min-width: 820px; }
+.wm-mobile-scroll-note { display: none; }
+.wm-wall-views { margin-top: 1.6rem; }
+.wm-wall-views img { aspect-ratio: 6 / 5; }
+.wm-multi-overview { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 4vw, 4rem); align-items: center; margin-block: 2.5rem; }
+.wm-assembly-views img { aspect-ratio: auto; height: auto; }
+.wm-assembly-takeaway { margin-top: 2.5rem; }
+@media (max-width: 900px) {
+  .wm-multi-overview { grid-template-columns: 1fr; }
+  .wm-multi-overview .wm-step-copy { grid-row: 1; }
+  .wm-mobile-scroll-note { display: inline; }
+  .wm-assembly-views { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 600px) {
+  .wm-case-links { gap: .4rem 1.5rem; }
+  .wm-wall-heading { margin-top: 2rem; }
+}

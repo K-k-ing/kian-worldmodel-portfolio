@@ -25,3 +25,18 @@ document.querySelectorAll('[data-experiment-scroll]').forEach((button) => {
     });
   });
 });
+
+
+// Progressive enhancement: without JS, both recorded evidence views remain visible.
+const chairControls = document.querySelector('[data-chair-controls]');
+if (chairControls) {
+  const buttons = [...chairControls.querySelectorAll('[data-chair-view]')];
+  const panels = [...document.querySelectorAll('[data-chair-panel]')];
+  const showChairView = (view) => {
+    buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.chairView === view)));
+    panels.forEach((panel) => { panel.hidden = panel.dataset.chairPanel !== view; });
+  };
+  buttons.forEach((button) => button.addEventListener('click', () => showChairView(button.dataset.chairView)));
+  showChairView('after');
+  chairControls.hidden = false;
+}
